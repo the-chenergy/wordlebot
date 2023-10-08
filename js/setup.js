@@ -42,9 +42,9 @@ $(document).ready(function() {
     $("#word-entered").on('input', function(e) {
         let val = $("#word-entered").val();
         if (val.length == word_length) {
-            if (!words.includes(val) && guessesMadeSoFar() > 0) {
-                return;
-            }
+            // if (!words.includes(val) && guessesMadeSoFar() > 0) {
+            //     return;
+            // }
 
             $("#word-entered").blur();
             
@@ -432,7 +432,7 @@ function createOptions(div) {
 }
 
 function createHardModeSwitch(div) {
-    let switch_label = createElement('div', "Show me the best guesses for 'Hard Mode':", 'hard label');
+    let switch_label = createElement('div', "Show me the best guesses for 'UN-HARD Mode':", 'hard label');
     let switch_container = createElement('label', '', 'hard switch');
     let switch_slider = createElement('span', '', 'slider round');
     let switch_checkbox = createElement('input', '', '', 'mode');

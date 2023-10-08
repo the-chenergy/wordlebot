@@ -609,10 +609,13 @@ function reducesListMost(answers, guesses, future_guess) {
   
         min = Math.min(min, data.adjusted);
         best_words.push({word: guesses[i], average: data.adjusted, differences: data.differences, wrong: 0});
+        // best_words.push(undefined);
+        // if (!future_guess) console.log('haha', i, guesses[i], data, best_words);
 
         if (data.weighted < 1 && future_guess) break;
         if (min == 0 && best_words.length >= answers.length && future_guess) break;
     }
+    // console.warn('wth', answers, guesses, future_guess, best_words);
 
     best_words = sortListByAverage(best_words);
     return best_words;

@@ -140,7 +140,7 @@ function resetGuessRows() {
 
 function getTestSize() {
     // return common.length;
-    return Math.min(500, common.length);
+    return Math.min(500E9, common.length);
 }
 
 function setupTest(word) {
